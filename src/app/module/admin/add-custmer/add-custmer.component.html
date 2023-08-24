@@ -1,0 +1,51 @@
+<form [formGroup]="formAdd" (ngSubmit)="Onsubmit()">
+    
+    <label for="userId">รหัสผู้ใช้งาน</label>
+    <input type="number" formControlName="userId" placeholder="รหัสผู้ใช้งาน"><br>
+
+    <label for="userPassword">ชื่อผู้ใช้งาน</label>
+    <input type="text" formControlName="userName" placeholder="ชื่อผู้ใช้งาน"><br>
+
+    <label for="userPassword">รหัสผ่าน</label>
+    <input type="text" formControlName="userPassword" placeholder="ชื่อผู้ใช้งาน"><br>
+
+    <label for="userTitle">คำนำหน้า</label>
+    <select formControlName="userTitle">
+        <option value="นาย">นาย</option>
+        <option value="นาย">นาง</option>
+        <option value="นาย">นางสาว</option>
+    </select>
+
+    <label for="userFirstname">ชื่อ</label>
+    <input type="text" formControlName="userFirstname" placeholder="ชื่อ"><br>
+
+    <label for="userLastname">นามสกุล</label>
+    <input type="text" formControlName="userLastname" placeholder="นามสกุล"><br>
+
+    <label for="userCardId">เลขบัตรประจะตัวประชาชน</label>
+    <input type="text" formControlName="userCardId" placeholder="เลขบัตรประจะตัวประชาชน"><br>
+
+    <label for="userEmail">อีเมล</label>
+    <input type="text" formControlName="userEmail" placeholder="อีเมล"><br>
+
+    <label for="userPhone">เบอร์โทรศัพท์</label>
+    <input type="text" formControlName="userPhone" placeholder="เบอร์โทรศัพท์"><br>
+    
+    <label for="userAddrss">ที่อยู่</label>
+    <input type="text" formControlName="userAddrss" placeholder="ที่อยู่"><br>
+    
+    <label for="roleId">รหัสประเภทผู้ใช้งาน</label>
+    <input type="number" formControlName="roleId" placeholder="รหัสประเภทผู้ใช้งาน"><br>
+    <button type="submit">ยืนยันข้อมูล</button>
+    
+    
+    
+   
+    
+   
+    
+   
+    
+    
+</form>
+

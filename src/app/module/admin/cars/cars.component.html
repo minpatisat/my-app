@@ -1,0 +1,72 @@
+<!-- <div class="navbar bg-base-100">
+    <svg class="w-6 h-6  text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+        <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+      </svg>
+  <a routerLink="/admin" class="btn btn-ghost normal-case text-3xl">หน้าหลัก</a>
+  
+
+</div> -->
+<header class="lg:px-16 px-4 bg-white flex flex-wrap items-center py-4 shadow-md">
+    <div routerLink="/admin"  class="btn btn-ghost normal-case text-3xl ">
+        <svg class="w-10 h-10 mr-4   text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+            <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+            
+          </svg>
+
+    </div>
+
+    <label for="menu-toggle" class="pointer-cursor md:hidden block">
+      <svg class="fill-current text-gray-900"
+        xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+        <title>menu</title>
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+      </svg>
+    </label>
+    <input class="hidden" type="checkbox" id="menu-toggle" />
+
+    <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+        <nav>
+            <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
+                <li><a class="md:p-4 py-3 px-0 block font-semibold text-5xl " >จัดการข้อมูลรถยนต์</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="hero min-h-screen " style="background-image: url(	https://www.drivehub.com/_next/image?url=%2Fnext-assets%2Fimgs%2Fauthentication-bg.png&w=1920&q=80);">
+    <div class="hero-overlay bg-opacity-60">
+
+<div class="car font-bold">
+    <table class="table">
+        <thead>
+            <tr class="thead">
+                <th scope="col">ลำดับ</th>
+                <th scope="col">รหัสรถยนต์</th>
+                <th scope="col">ชื่อรถยนต์</th>
+                <th scope="col">ยี่ห้อ</th>
+                <th scope="col">ราคา</th>
+                <th scope="col">รูปภาพ</th>
+                <th scope="col">สถานะ</th>
+                <th scope="col">รายละเอียด</th>
+                
+                <td><button class="btn btn-success text-white ml-auto" routerLink = "./Add-custmer">เพิ่ม</button></td>
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let item of ListCars ; let i=index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{item.carId}}</td>
+                <td>{{item.carName}}</td>
+                <td>{{item.carBrand}}</td>
+                <td>{{item.carPrice}}</td>
+                <td>{{item.carImg}}</td>
+                <td>{{item.carStetus}}</td>
+                <td>{{item.carDetail}}</td>
+                
+                <td><button class="btn btn-warning text-white" (click) = "OngetId(item)">แก้ไข</button></td>
+                <td><button class="btn btn-error text-white" (click) = "ondelete (item)">ลบ</button></td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>

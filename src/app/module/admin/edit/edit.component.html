@@ -1,0 +1,31 @@
+<main class="p-4 md:ml-64 h-auto pt-20">
+    <form [formGroup]="formAdd" (ngSubmit)="Onsubmit()">
+        <label for="userId">รหัสผู้ใช้งาน</label>
+        <input type="text" id="userId" formControlName="userId" placeholder="ชื่อผู้ใช้"><br>
+        <label for="Username">ชื่อผู้ใช้</label>
+        <input type="text" id="Username" formControlName="Username" placeholder="ชื่อผู้ใช้"><br>
+        <label for="UserPassword">รหัสผ่านผู้ใช้</label>
+        <input type="text" id="UserPassword" formControlName="UserPassword" placeholder="รหัสผ่านผู้ใช้"><br>
+        <label for="">คำนำหน้า</label>
+        <select formControlName="UserTitle">
+            <option selected="">---คำนำหน้า---</option>
+            <option value="นาย">นาย</option>
+            <option value="นาย">นาง</option>
+            <option value="นาย">นางสาว</option>
+        </select>
+        <label for="UserFirstname">ชื่อ</label>
+        <input type="text" id="UserFirstname" formControlName="UserFirstname" placeholder="ชื่อ"><br>
+        <label for="UserLastname">นามสกุล</label>
+        <input type="text" id="UserLastname" formControlName="UserLastname" placeholder="นามสกุล"><br>
+        <label for="userCardId">เลขบัตรประจะตัวประชาชน</label>
+        <input type="text" id="userCardId" formControlName="userCardId" placeholder="เลขบัตรประจะตัวประชาชน"><br>
+        <label for="UserPhon">เบอร์โทรศัพท์</label>
+        <input type="text" id="UserPhon" formControlName="UserPhon" placeholder="เบอร์โทรศัพท์"><br>
+        <label for="UserEmail">อีเมล</label>
+        <input type="text" id="UserEmail" formControlName="UserEmail" placeholder="อีเมล"><br>
+        <label for="userAddress">ที่อยู่</label>
+        <input type="text" id="userAddress" formControlName="userAddress" placeholder="ที่อยู่"><br>
+        
+        <button type="submit">ยืนยันข้อมูล</button>
+    </form>
+    </main>
